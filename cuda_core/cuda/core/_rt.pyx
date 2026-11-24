@@ -82,6 +82,10 @@ cdef extern from "_cpp/rt/rt.hpp" namespace "cuda_core::rt":
     ContextHandle get_primary_context "cuda_core::rt::get_primary_context" (
         int device_id) except+ nogil
     ContextHandle get_current_context "cuda_core::rt::get_current_context" () except+ nogil
+    cydriver.CUresult enter_context "cuda_core::rt::detail::enter_context" (
+        const ContextHandle& h_context, cydriver.CUcontext* previous, int* changed) noexcept nogil
+    cydriver.CUresult exit_context "cuda_core::rt::detail::exit_context" (
+        cydriver.CUcontext previous, int changed, cydriver.CUresult operation_status) noexcept nogil
     cydriver.CUresult context_synchronize "cuda_core::rt::context_synchronize" (
         const ContextHandle& h_context) noexcept nogil
     cydriver.CUresult context_get_stream_priority_range "cuda_core::rt::context_get_stream_priority_range" (

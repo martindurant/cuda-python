@@ -104,6 +104,15 @@ using events or other CUDA synchronization mechanisms as needed. See
 for a complete example.
 
 
+GPU file I/O
+------------
+
+.. toctree::
+   :maxdepth: 1
+
+   storage
+
+
 CUDA compilation toolchain
 --------------------------
 

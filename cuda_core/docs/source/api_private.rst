@@ -72,6 +72,16 @@ CUDA protocols
 
    typing.IsStreamType
 
+GPU file I/O
+------------
+
+.. autosummary::
+   :toctree: generated/
+
+   storage._file._File
+   storage._file._StreamFile
+   storage._file._Request
+
 NVML
 ----
 

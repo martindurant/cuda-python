@@ -11,3 +11,4 @@
 #include "driver_api.hpp"
 #include "error.hpp"
 #include "api.hpp"
+#include "context_scope.hpp"
